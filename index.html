@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Necessidades - EQTLAB</title>
+  <link rel="icon" href="favicon.ico" type="image/png"  />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e88e5;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      background-color: #1e88e5;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    .logo-canto {
+
+  top: 20px;
+  left: 20px;
+  width: 50px; /* ajuste conforme necessário */
+  height: auto;
+  z-index: 999;
+}
+  </style>
+</head>
+<body>
+   
+  <div class="container">
+    <h2>Registro de Necessidade - EQTLAB</h2>
+    <!-- <img src="logo.png" alt="Logo EQTLAB" class="logo-canto" /> -->
+    
+    <form action="https://formsubmit.co/joana.lima@digisystem.com.br" method="POST">
+      <!-- <input type="hidden" name="_next" value="/obrigado.html"> -->
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+
+      
+      <!-- Campo oculto para evitar spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="Nova necessidade registrada no EQTLAB">
+
+      <label for="nome">Nome do Solicitante:</label>
+      <input type="text" id="nome" name="Nome do Solicitante" required />
+
+      <label for="setor">Setor:</label>
+      <select id="setor" name="Setor" required>
+        <option value="">Selecione</option>
+        <option>Desenvolvimento</option>
+        <option>Projetos</option>
+        <option>Financeiro</option>
+        <option>Contábil</option>
+        <option>Gerência</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="descricao">Descrição da Necessidade:</label>
+      <textarea id="descricao" name="Descrição da Necessidade" required></textarea>
+
+      <label for="sistema">Está relacionado a algum sistema/processo?</label>
+      <input type="text" id="sistema" name="Sistema/Processo Relacionado" placeholder="Ex: Sistema X, Processo Y" />
+
+      <label for="impacto">Impacto da Não Resolução:</label>
+      <select id="impacto" name="Impacto" required>
+        <option value="">Selecione</option>
+        <option>Nenhum impacto significativo</option>
+        <option>Pode atrasar entregas</option>
+        <option>Pode gerar custos extras</option>
+        <option>Pode afetar o cliente final</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="urgencia">Nível de Urgência:</label>
+      <select id="urgencia" name="Urgência" required>
+        <option value="">Selecione</option>
+        <option>Baixa – Pode esperar</option>
+        <option>Média – Resolver em breve</option>
+        <option>Alta – Atenção imediata</option>
+      </select>
+
+      <label for="sugestao">Sugestão de Solução (opcional):</label>
+      <textarea id="sugestao" name="Sugestão de Solução"></textarea>
+
+      <button type="submit">Enviar Necessidade</button>
+    </form>
+  </div>
+</body>
+</html>
